@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <p>FREE SHIPPING ON ORDERS OVER $79</p>
+            <input type="text" placeholder="Search here...">
+        </div>
+        <div class="header-main">
+            <div class="logo">B</div>
+            <nav>
+                <ul>
+                    <li>Seating</li>
+                    <li>Table</li>
+                    <li>Workstation Furnitures</li>
+                    <li>Dining Room</li>
+                    <li>All Pages</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+            <div class="account-cart">
+                <a href="#">My Account</a>
+                <a href="#"><img src="cart-icon.png" alt="Cart"> 0</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1>Cart</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <tr>
+                    <td><img src="images/1.jpg" alt="Product Image"></td>
+                    <td>Vestibulum suscipit</td>
+                    <td>$165.00</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>$165.00</td>
+                    <td><button class="remove-item">×</button></td>
+                </tr>
+                <tr>
+                    <td><img src="images/2.jpg" alt="Product Image"></td>
+                    <td>Vestibulum dictum magna</td>
+                    <td>$50.00</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>$50.00</td>
+                    <td><button class="remove-item">×</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="cart-actions">
+            <button id="update-cart">Update Cart</button>
+            <button id="continue-shopping">Continue Shopping</button>
+        </div>
+        <div class="cart-coupon">
+            <label for="coupon-code">Enter your coupon code if you have one:</label>
+            <input type="text" id="coupon-code">
+            <button id="apply-coupon">Apply Coupon</button>
+        </div>
+        <div class="cart-totals">
+            <p>Subtotal: <span id="subtotal">$215.00</span></p>
+            <p>Shipping: 
+                <label><input type="radio" name="shipping" value="7"> Flat Rate: $7.00</label>
+                <label><input type="radio" name="shipping" value="0"> Free Shipping</label>
+            </p>
+            <p>Total: <span id="total">$215.00</span></p>
+            <button id="checkout">Proceed to Checkout</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
