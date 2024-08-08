@@ -40,5 +40,21 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    function checkout() {
+        const total = parseFloat(totalElement.textContent.replace('$', ''));
+        if (cartItems.querySelectorAll('tr').length === 0) {
+            alert('Your cart is empty');
+            return;
+        }
+
+        alert(`Your total is $${total.toFixed(2)}. Proceeding to checkout...`);
+
+        cartItems.innerHTML = '';
+
+        window.location.href = 'thankyou.html';
+    }
+
+    document.getElementById('checkout').addEventListener('click', checkout);
+
     updateCartTotal();
 });
